@@ -1,12 +1,11 @@
 import tkinter as tk
-from tkinter import ttk
+from tkinter import simpledialog,ttk
 from tkinter import messagebox
 import platform
 import os
 import sys
 import subprocess
 import hashlib
-from tkinter import simpledialog
 import ctypes
 import sched
 import time
@@ -192,6 +191,7 @@ class WebsiteBlockerApp:
             print("Hosts file not found.")
         except Exception as e:
             print(f"An error occurred: {e}")
+            
 
     def list_blocked_sites(self):
         global blocked_sites_set
@@ -226,8 +226,6 @@ class WebsiteBlockerApp:
             print("Hosts file not found.")
         except Exception as e:
             print(f"An error occurred: {e}")
-
-
 
 
     def whitelist_sites(self):
@@ -300,7 +298,6 @@ class WebsiteBlockerApp:
             return response.decode()
         except subprocess.CalledProcessError:
             return f"Failed to ping {site}."
-
 
 
     def confirm_blocking_status(self):
@@ -401,12 +398,7 @@ class WebsiteBlockerApp:
             messagebox.showerror("Invalid Date Format", "Invalid date format. Please use YYYY-MM-DD HH:MM:SS format.")
         except Exception as e:
             messagebox.showerror("Error", f"An error occurred: {e}")
-
-
-
         
-
-
     def exit_program(self):
         if messagebox.askokcancel("Exit", "!!!Do you really want to exit the program ?"):
             self.root.destroy()
@@ -415,6 +407,7 @@ class WebsiteBlockerApp:
         help_text = """This is a simple website blocker.
 Please feel free to ask any queries at www.linkedin.com/in/pemba-sherpa-40a188263"""
         messagebox.showinfo("Help", help_text)
+
 
 if __name__ == "__main__":
     root = tk.Tk()
