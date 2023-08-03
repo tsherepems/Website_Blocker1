@@ -1,12 +1,11 @@
 import tkinter as tk
-from tkinter import ttk
+from tkinter import simpledialog, ttk
 from tkinter import messagebox
 import platform
 import os
 import sys
 import subprocess
 import hashlib
-from tkinter import simpledialog
 import ctypes
 import sched
 import time
