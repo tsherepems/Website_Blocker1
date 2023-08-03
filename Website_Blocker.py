@@ -119,7 +119,7 @@ class WebsiteBlockerApp:
 
         if system_type == "Windows":
             host_file_path = r"C:\Windows\System32\drivers\etc\hosts"
-        elif system_type == "Linux" or system_type == "Darwin":
+        elif system_type in ("Linux", "Darwin"):
             host_file_path = "/etc/hosts"
         else:
             print("Unsupported operating system.")
@@ -158,7 +158,7 @@ class WebsiteBlockerApp:
 
         if system_type == "Windows":
             host_file_path = r"C:\Windows\System32\drivers\etc\hosts"
-        elif system_type == "Linux" or system_type == "Darwin":
+        elif system_type in ("Linux", "Darwin"):
             host_file_path = "/etc/hosts"
         else:
             print("Unsupported operating system.")
@@ -199,7 +199,7 @@ class WebsiteBlockerApp:
         system_type = platform.system()
         if system_type == "Windows":
             host_file_path = r"C:\Windows\System32\drivers\etc\hosts"
-        elif system_type == "Linux" or system_type == "Darwin":
+        elif system_type in ("Linux", "Darwin"):
             host_file_path = "/etc/hosts"
         else:
             print("Unsupported operating system.")
@@ -234,7 +234,7 @@ class WebsiteBlockerApp:
         system_type = platform.system()
         if system_type == "Windows":
             host_file_path = r"C:\Windows\System32\drivers\etc\hosts"
-        elif system_type == "Linux" or system_type == "Darwin":
+        elif system_type in ("Linux", "Darwin"):
             host_file_path = "/etc/hosts"
         else:
             tk.messagebox.showerror("Unsupported OS", "Unsupported operating system.")
