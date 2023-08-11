@@ -93,6 +93,12 @@ class WebsiteBlockerApp:
         self.output_text.pack(pady=5, padx=20)
         self.output_text.insert(tk.END, "Results will appear here.")
 
+        schedule_blocking_button = ttk.Button(self.root, text="Schedule Blocking", command=self.schedule_blocking)
+        schedule_blocking_button.pack(pady=5)
+
+        schedule_unblocking_button = ttk.Button(self.root, text="Schedule Unblocking", command=self.schedule_unblocking)
+        schedule_unblocking_button.pack(pady=5)
+
         self.schedule_time_label = ttk.Label(self.root, text="Enter the schedule time (YYYY-MM-DD HH:MM:SS):")
         self.schedule_time_label.pack(pady=5)
         self.schedule_time_entry = ttk.Entry(self.root, width=30)
